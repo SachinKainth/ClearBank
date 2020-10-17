@@ -67,6 +67,7 @@ namespace ClearBank.DeveloperTest.Tests.Patterns
             validator.Should().BeOfType<FasterPaymentsPaymentSchemeValidator>();
             var fasterPaymentsValidator = (FasterPaymentsPaymentSchemeValidator)validator;
             fasterPaymentsValidator.Account.AccountNumber.Should().Be("Faster Payments Account");
+            fasterPaymentsValidator.MakePaymentRequest.DebtorAccountNumber.Should().Be("Faster Payments Account");
         }
     }
 }
